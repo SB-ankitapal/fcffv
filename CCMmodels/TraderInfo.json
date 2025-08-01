@@ -1,0 +1,138 @@
+{
+  "title": "TraderInfo",
+  "x-stoplight": {
+    "id": "0em1lpcugl3ji"
+  },
+  "type": "object",
+  "required": [
+    "name",
+    "nameLangInd"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "k44mbhjfqmb6l"
+      },
+      "description": "Trader name",
+      "maxLength": 70,
+      "example": "Chan Tai Man"
+    },
+    "nameLangInd": {
+      "x-stoplight": {
+        "id": "0rqmu2iqcrrix"
+      },
+      "enum": [
+        "E",
+        "T",
+        "S"
+      ],
+      "description": "Name language indicator:<br/>\nE - English<br/>\nT - Traditional Chinese <br/>\nS - Simplified Chinese"
+    },
+    "brn": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "9jb336fca1ooq"
+      },
+      "description": "Business Registration Number ",
+      "maxLength": 35
+    },
+    "hkId": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "jrlcuqtk184hy"
+      },
+      "description": "HKID ",
+      "maxLength": 35
+    },
+    "passportNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "cf9kmbap0obcx"
+      },
+      "description": "Passport Number",
+      "maxLength": 35
+    },
+    "contactName": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "h7mkqnjje5wx4"
+      },
+      "description": "Name of the contact person",
+      "maxLength": 70,
+      "example": "Chan Tai Man"
+    },
+    "contactChiName": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "nva45wa5nek9u"
+      },
+      "description": "Traditional Chinese name of the contact person",
+      "maxLength": 70
+    },
+    "contactNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "pdgah7dhft7xh"
+      },
+      "description": "Contact Number",
+      "maxLength": 256
+    },
+    "faxNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "6rytq3rauljzs"
+      },
+      "description": "Fax number",
+      "maxLength": 256
+    },
+    "address": {
+      "$ref": "./AciAddress.json",
+      "x-stoplight": {
+        "id": "2mf56ywutzqym"
+      },
+      "description": "Address"
+    },
+    "addrLangInd": {
+      "x-stoplight": {
+        "id": "k6oik74j9rsux"
+      },
+      "enum": [
+        "E",
+        "T",
+        "S"
+      ],
+      "description": "Address language indicator:<br/>\nE - English<br/>\nT - Traditional Chinese <br/>\nS - Simplified Chinese"
+    },
+    "tswId": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "so8kwdxytpg7o"
+      },
+      "description": "TSW ID",
+      "example": "P392310191",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "traderInd": {
+      "x-stoplight": {
+        "id": "odrcze5jl2al1"
+      },
+      "enum": [
+        "P",
+        "C"
+      ],
+      "description": "Trader indicator:<br/>\nP - Person<br/>\nC - Company"
+    },
+    "companyTswId": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "jeh87qnz01al2"
+      },
+      "description": "Company TSW ID",
+      "maxLength": 11,
+      "minLength": 10,
+      "example": "39283042112"
+    }
+  }
+}

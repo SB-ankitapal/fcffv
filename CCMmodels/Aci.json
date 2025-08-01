@@ -1,0 +1,80 @@
+{
+  "title": "ACI",
+  "x-stoplight": {
+    "id": "16334zkkpi3c6"
+  },
+  "type": "object",
+  "required": [
+    "aciInfo",
+    "traderInfo",
+    "consignorInfo",
+    "consigneeInfo",
+    "consignmentInfo",
+    "goodsItemInfo"
+  ],
+  "properties": {
+    "aciInfo": {
+      "$ref": "./AdvanceCargoInfo.json",
+      "x-stoplight": {
+        "id": "jivhzc7uuyl0n"
+      },
+      "description": "Advance Cargo Information"
+    },
+    "traderInfo": {
+      "$ref": "./TraderInfo.json",
+      "x-stoplight": {
+        "id": "b2e6fc54fhduu"
+      },
+      "description": "Trader Information"
+    },
+    "consignorInfo": {
+      "$ref": "./ConsignorInfo.json",
+      "x-stoplight": {
+        "id": "uxlz7dufep21b"
+      },
+      "description": "Consignor Information"
+    },
+    "consigneeInfo": {
+      "$ref": "./ConsigneeInfo.json",
+      "x-stoplight": {
+        "id": "phfh3yb03mguj"
+      },
+      "description": "Consignne Information"
+    },
+    "consignmentInfo": {
+      "$ref": "./ConsignmentInfo.json",
+      "x-stoplight": {
+        "id": "24vto2lmy66ce"
+      },
+      "description": "Consignment Information"
+    },
+    "goodsItemInfo": {
+      "x-stoplight": {
+        "id": "d0gxk5fwc2mae"
+      },
+      "description": "Consignment Item Information",
+      "type": "array",
+      "items": {
+        "$ref": "./GoodsItemInfo.json",
+        "x-stoplight": {
+          "id": "l908t5m5vo9by"
+        }
+      }
+    },
+    "transhipmentInfo": {
+      "$ref": "./TranshipmentInfo.json",
+      "x-stoplight": {
+        "id": "y1oil1bby2idl"
+      },
+      "description": "Transhipment Information "
+    },
+    "transportEquipment": {
+      "$ref": "./TransportEquipment.json",
+      "x-stoplight": {
+        "id": "tkteamv4bch18"
+      },
+      "description": "Transport equipment"
+    }
+  },
+  "description": ""
+}

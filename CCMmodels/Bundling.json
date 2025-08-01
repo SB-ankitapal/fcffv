@@ -1,0 +1,215 @@
+{
+  "title": "Bundling",
+  "x-stoplight": {
+    "id": "qlvi4ywlpwfsa"
+  },
+  "examples": [
+    {
+      "ubr": "9100204461",
+      "version": 1,
+      "channel": "WEB",
+      "impExpInd": "I",
+      "ccrnList": [
+        "1323456324",
+        "1324324567"
+      ],
+      "unassociatedBatchCcrnList": [
+        "1423480841"
+      ],
+      "vrn": "CM1999",
+      "party": "DRIVER",
+      "driverInfo": {
+        "tswId": "P492812390",
+        "chiName": "陳大文"
+      },
+      "expectedLbcp": "LMC",
+      "submittedDatetime": "2024-09-29T09:00:00",
+      "bundlingCompleteDatetime": "2024-09-29T09:00:05",
+      "validUntilDate": "2024-10-30",
+      "udi": "293921021"
+    }
+  ],
+  "allOf": [
+    {
+      "required": [
+        "ubr",
+        "version",
+        "channel",
+        "impExpInd",
+        "ccrnList",
+        "vrn",
+        "party",
+        "driverInfo",
+        "submittedDatetime",
+        "bundlingCompleteDatetime",
+        "validUntilDate"
+      ],
+      "properties": {
+        "ubr": {
+          "type": "string",
+          "description": "Unique Bundling Reference",
+          "x-stoplight": {
+            "id": "qdt860ycl7zck"
+          },
+          "maxLength": 35,
+          "example": "9100204461"
+        },
+        "version": {
+          "type": "integer",
+          "x-stoplight": {
+            "id": "zfvbn6azwcq3o"
+          },
+          "format": "int64",
+          "minimum": 1,
+          "description": "Bundling version,  start from 1 and increment by one for each bundling updated"
+        },
+        "channel": {
+          "x-stoplight": {
+            "id": "rdg1knkkaji3f"
+          },
+          "enum": [
+            "I",
+            "M",
+            "S",
+            "W"
+          ],
+          "description": "Submission channel:<br/>\nI - IVRS <br/>\nM - Mobile<br/>\nS - Bulk (System to System) <br/>\nW - Web <br/>\n"
+        },
+        "impExpInd": {
+          "x-stoplight": {
+            "id": "bugh5or3fhp4v"
+          },
+          "enum": [
+            "I",
+            "E"
+          ],
+          "description": "Import/Export indicator:<br/>\nI - Import<br/>\nE - Export"
+        },
+        "ccrnList": {
+          "type": "array",
+          "x-stoplight": {
+            "id": "i5extfs1jd3sn"
+          },
+          "description": "List of CCRN in bundling",
+          "minItems": 1,
+          "maxItems": 99999,
+          "items": {
+            "x-stoplight": {
+              "id": "0pqhmlf5v6mxu"
+            },
+            "type": "string",
+            "maxLength": 70,
+            "example": "1324324567",
+            "minLength": 0
+          }
+        },
+        "unassociatedBatchCcrnList": {
+          "type": "array",
+          "x-stoplight": {
+            "id": "ljtqdqr6cfahe"
+          },
+          "description": "List of CCRNs whose assoicated batchCCRN should be updated to NULL",
+          "items": {
+            "x-stoplight": {
+              "id": "s19ewfwr1m461"
+            },
+            "type": "string",
+            "maxLength": 70
+          }
+        },
+        "vrn": {
+          "type": "string",
+          "description": "Vehicle Registration Number",
+          "x-stoplight": {
+            "id": "c6462an9id079"
+          },
+          "maxLength": 25,
+          "example": "CM1999"
+        },
+        "party": {
+          "x-stoplight": {
+            "id": "xacbs1lc4ecjp"
+          },
+          "enum": [
+            "DRIVER",
+            "AGENT",
+            "VASP"
+          ],
+          "description": "Submitter Party:<br>\nDRIVER - Submitted by truck DRIVER<br>\nAGENT - Submitted by agent (applicable to Phase 3A only)<br>\nVASP - Submitted by VASP (applicable to Phase 3B and after)"
+        },
+        "agentInfo": {
+          "$ref": "./AgentInfo.json",
+          "x-stoplight": {
+            "id": "oqzdexxawsndd"
+          },
+          "description": "Agent/VASP Information"
+        },
+        "driverInfo": {
+          "$ref": "./DriverInfo.json",
+          "x-stoplight": {
+            "id": "sm9u38hafdiiw"
+          },
+          "description": "Driver Information"
+        },
+        "expectedLbcp": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "n75pyjai1cu3w"
+          },
+          "maxLength": 3,
+          "description": "The code of expected Customs Land Boundary Control Point"
+        },
+        "submittedDatetime": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "iojzhm2ok6p0z"
+          },
+          "format": "date-time",
+          "description": "Submission datetime",
+          "minLength": 19,
+          "maxLength": 19
+        },
+        "bundlingCompleteDatetime": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "8gqwotciz3b1d"
+          },
+          "format": "date-time",
+          "description": "Bundling completion datetime which is calulated in STD.",
+          "minLength": 19,
+          "maxLength": 19
+        },
+        "validUntilDate": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "heyl05rv4wnaw"
+          },
+          "maxLength": 10,
+          "format": "date",
+          "description": "Validity (end date) of bundling, inclusive",
+          "example": "2024-10-09",
+          "minLength": 10
+        },
+        "udi": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "iy9dtb8e2j8xb"
+          },
+          "description": "Unique Declaration ID",
+          "maxLength": 70,
+          "example": "293921021"
+        }
+      },
+      "x-stoplight": {
+        "id": "rcoo19pwpw56a"
+      }
+    },
+    {
+      "$ref": "./InOneGo.json",
+      "x-stoplight": {
+        "id": "wdi7w0ccjifkg"
+      }
+    }
+  ],
+  "type": "object"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "SubmitterUserProfile",
+  "x-stoplight": {
+    "id": "kpg0dme618u7s"
+  },
+  "type": "object",
+  "properties": {
+    "chiName": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "e92wn3vkgyup7"
+      }
+    },
+    "engName": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "lotz3wfgd3by0"
+      }
+    },
+    "identityNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "xed9alkgu9unw"
+      }
+    },
+    "identityType": {
+      "x-stoplight": {
+        "id": "m6tmdw887qc44"
+      },
+      "enum": [
+        "HKID",
+        "PASSPORT",
+        "OTHER"
+      ]
+    },
+    "engAddress": {
+      "$ref": "./TswAddress.json",
+      "x-stoplight": {
+        "id": "crz7brpc21p3l"
+      }
+    },
+    "chiAddress": {
+      "$ref": "./TswAddress.json",
+      "x-stoplight": {
+        "id": "nyfz78ym6nb2q"
+      }
+    },
+    "contactName": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "tbcgjynb28kup"
+      }
+    },
+    "contactNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "c9sbb4p3bj7s1"
+      }
+    },
+    "contactNoType": {
+      "x-stoplight": {
+        "id": "w3isqbaiumahu"
+      },
+      "enum": [
+        "FX",
+        "EM",
+        "TE"
+      ],
+      "description": "Contact number type:<br/>\nFX - Telefax<br/>\nEM - Electronic mail<br/>\nTE - Telephone"
+    },
+    "brn": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "z9ow5nqjusb9x"
+      },
+      "description": "Business Registration Number",
+      "maxLength": 17
+    }
+  }
+}

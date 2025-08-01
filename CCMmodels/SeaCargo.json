@@ -1,0 +1,52 @@
+{
+  "title": "SeaCargo",
+  "x-stoplight": {
+    "id": "lggwwstsv7g6h"
+  },
+  "type": "object",
+  "properties": {
+    "vesselNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "j55ey6su1o0eg"
+      },
+      "description": "Vessel Identification",
+      "maxLength": 70
+    },
+    "shipmentDate": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "8fmp50autnqip"
+      },
+      "description": "Estimated Vessel Departure/Arrival Date",
+      "format": "date",
+      "minLength": 10,
+      "maxLength": 10,
+      "example": "2024-08-25"
+    },
+    "voyageNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "fgz1us4yg5v9x"
+      },
+      "description": "Voyage Number",
+      "maxLength": 70
+    },
+    "mbl": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "24yi00lisf3d4"
+      },
+      "description": "Master Bill of Lading Number",
+      "maxLength": 70
+    },
+    "hbl": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "ivik6ge09pyhx"
+      },
+      "description": "House Bill of Lading Number",
+      "maxLength": 70
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Sort",
+  "x-stoplight": {
+    "id": "24pl6vkahng7k"
+  },
+  "type": "object",
+  "required": [
+    "field",
+    "order"
+  ],
+  "properties": {
+    "field": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "0fst4wzgxocji"
+      },
+      "description": "Sort by"
+    },
+    "order": {
+      "x-stoplight": {
+        "id": "0tbf51dex0tte"
+      },
+      "enum": [
+        "A",
+        "D"
+      ],
+      "description": "Sorting order<br/>\n\nA - ascending <br/>\nD - descending"
+    }
+  }
+}

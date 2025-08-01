@@ -1,0 +1,128 @@
+{
+  "title": "VehicleSubscriptionInfo",
+  "x-stoplight": {
+    "id": "30f10buomafzh"
+  },
+  "type": "object",
+  "examples": [
+    {
+      "seqNo": 1,
+      "vrn": "MM0101",
+      "closedRoadPermitNo": "40239482012",
+      "vehicleType": "BT",
+      "ownerChiName": "陳大文",
+      "ownerEngName": "Chan Tai Man",
+      "addrLangInd": "C",
+      "chiAddress": {
+        "cityName": "香港",
+        "countryCode": "HK",
+        "line1": "尖沙咀彌敦道100號嘉華大廈12樓"
+      },
+      "version": 1
+    }
+  ],
+  "required": [
+    "seqNo",
+    "vrn",
+    "addrLangInd"
+  ],
+  "properties": {
+    "seqNo": {
+      "type": "integer",
+      "x-stoplight": {
+        "id": "evxsoaywvpldo"
+      },
+      "format": "int64",
+      "minimum": 0,
+      "description": "Vehicle ID sequence number"
+    },
+    "vrn": {
+      "type": "string",
+      "description": "Vehicle Registration Number",
+      "maxLength": 25,
+      "example": "MM0101",
+      "x-stoplight": {
+        "id": "c0a3a0iwffdbk"
+      }
+    },
+    "closedRoadPermitNo": {
+      "type": "string",
+      "description": "Closed Road Permit Number",
+      "maxLength": 11,
+      "x-stoplight": {
+        "id": "kgiaer6iznmhb"
+      }
+    },
+    "vehicleType": {
+      "description": "Vehicle type <br/>\n\nPossible value: <br/>\nBT – Box truck <br/>\nCT – Container truck <br/>\nTT – Tow truck <br/>\nOT – Others\n",
+      "x-stoplight": {
+        "id": "mmaraqnnpjpy9"
+      },
+      "enum": [
+        "BT",
+        "CT",
+        "TT",
+        "OT"
+      ]
+    },
+    "vehicleOtherType": {
+      "type": "string",
+      "description": "Vehicle Type Other Information (applicable if Vehicle Type is Other)",
+      "maxLength": 50,
+      "x-stoplight": {
+        "id": "ucorjh97qcxf0"
+      }
+    },
+    "ownerChiName": {
+      "type": "string",
+      "description": "Vehicle owner's Chinese name",
+      "example": "陳大文",
+      "maxLength": 70,
+      "x-stoplight": {
+        "id": "xd42ub64uwjvn"
+      }
+    },
+    "ownerEngName": {
+      "type": "string",
+      "description": "Vehicle owner's English name",
+      "example": "Chan Tai Man",
+      "maxLength": 70,
+      "x-stoplight": {
+        "id": "20gt7ucdki2a7"
+      }
+    },
+    "addrLangInd": {
+      "x-stoplight": {
+        "id": "iomfdvhjabvle"
+      },
+      "enum": [
+        "C",
+        "E"
+      ],
+      "description": "Address language indicator:<br/>\nC - Chinese<br/>\nE - English\n"
+    },
+    "chiAddress": {
+      "$ref": "./TswAddress.json",
+      "description": "Chinese Address",
+      "x-stoplight": {
+        "id": "6omxhh1ic5890"
+      }
+    },
+    "engAddress": {
+      "$ref": "./TswAddress.json",
+      "description": "Englist Address",
+      "x-stoplight": {
+        "id": "8ue6yeep3bv2m"
+      }
+    },
+    "version": {
+      "type": "integer",
+      "x-stoplight": {
+        "id": "a8wz8t89n982s"
+      },
+      "format": "int64",
+      "minimum": 1,
+      "description": "Version number"
+    }
+  }
+}

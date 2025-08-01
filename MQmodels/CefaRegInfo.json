@@ -1,0 +1,59 @@
+{
+  "title": "CefaRegInfo",
+  "x-stoplight": {
+    "id": "ok9xkhb6i4ob7"
+  },
+  "type": "object",
+  "required": [
+    "refNo",
+    "actionType",
+    "siteList"
+  ],
+  "properties": {
+    "refNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "9l8ttki0kip4t"
+      },
+      "maxLength": 10,
+      "description": "CEFA scheme reference number "
+    },
+    "actionType": {
+      "x-stoplight": {
+        "id": "x7iyxk4kn0tnu"
+      },
+      "description": "Action Type:<br/>\nI - Insert<br/>\nU - Update<br/>\nD - Delete",
+      "enum": [
+        "I",
+        "U",
+        "D"
+      ]
+    },
+    "siteList": {
+      "x-stoplight": {
+        "id": "99895021tzpvv"
+      },
+      "description": "CEFA site information",
+      "type": "array",
+      "items": {
+        "$ref": "./CefaSiteInfo.json",
+        "x-stoplight": {
+          "id": "53iho3tv49nty"
+        }
+      }
+    },
+    "vrnList": {
+      "x-stoplight": {
+        "id": "h62e68c02tzok"
+      },
+      "description": "List of registered vehicle registration numbers under CEFA scheme",
+      "type": "array",
+      "items": {
+        "$ref": "./VrnInfo.json",
+        "x-stoplight": {
+          "id": "nax14ncdqhoe8"
+        }
+      }
+    }
+  }
+}

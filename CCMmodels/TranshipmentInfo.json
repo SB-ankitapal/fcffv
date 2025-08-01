@@ -1,0 +1,52 @@
+{
+  "title": "TranshipmentInfo",
+  "x-stoplight": {
+    "id": "m1kd7bnk05i2q"
+  },
+  "type": "object",
+  "properties": {
+    "transhipmentScheme": {
+      "x-stoplight": {
+        "id": "hdjcuovua23s4"
+      },
+      "description": "Transhipment Scheme (i.e. ITFS, ATCS)",
+      "enum": [
+        "ITFS",
+        "ATCS"
+      ]
+    },
+    "transhipmentMode": {
+      "x-stoplight": {
+        "id": "vrgp77u2zvta4"
+      },
+      "description": "Transhipment Mode: <br/>\nLA - Land to Air (Southbound) <br/>\nAL - Air to Land (Northbound) <br/>\nLS - Land to Sea (Southbound) <br/>\nSL - Sea to Land (Northbound) <br/>",
+      "enum": [
+        "LA",
+        "AL",
+        "LS",
+        "SL"
+      ]
+    },
+    "airCargo": {
+      "$ref": "./AirCargo.json",
+      "x-stoplight": {
+        "id": "a4uop7i7qbnt8"
+      },
+      "description": "Air Cargo"
+    },
+    "seaCargo": {
+      "$ref": "./SeaCargo.json",
+      "x-stoplight": {
+        "id": "z7ujwjmykk2ye"
+      },
+      "description": "Sea Cargo"
+    },
+    "schemeRegNo": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "jckzqifk3163v"
+      },
+      "description": "IMTF Reference Number / ATCS Reference Number"
+    }
+  }
+}
