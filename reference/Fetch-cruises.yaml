@@ -10,7 +10,7 @@ openapi: 3.1.0
 info:
   version: 7.0.0
   title: Fetch Cruises
-  description: 'The Power Shopping APIs are engineered for optimal performance through effective cache management. These APIs feature endpoints for retrieving products with basic filters, aimed at improving the shopping experience.'
+  description: 'The Power Shopping APIs are engineered for optimal performance through effective cache management. These APIs feature endpoints for retrieving products with basic filters, aimed at improving the shopping experience.hghgh'
 servers:
   - url: KONG_DATAPLANE_URL
     description: Dataplane URL
